@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+ <% if user_signed_in? %>
+ <div class="bg-white rounded p-3 shadow">
+    <h1 style="text-align:center;">Bienvenidos</h1>
+   <%= link_to "Agregar cliente", new_customer_path, class: "btn btn-light mx-1 mb-10 border border-primary", style:"width: 150px"%>
+      <% else %>
+    <div class="container-fluid mt-5">
+    <h1 style="text-align:center;"><h2>Que bueno volver a verte</h2>
+<% end %>
+    </div>
+</div>
